@@ -2,7 +2,8 @@
 
 The extension contains snippets for NgRx used with Angular(v4) & Typescript.
 
-![Snippets Usage](images/usage_min.gif)
+![Snippets Usage](https://github.com/AhsanAyaz/vscode-ngrx-snippets/raw/master/images/usage_min.gif)
+
 
 ## Snippets
 
