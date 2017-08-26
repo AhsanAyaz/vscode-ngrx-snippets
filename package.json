@@ -1,0 +1,44 @@
+{
+    "name": "vscode-ngrx-snippets",
+    "displayName": "vscode-ngrx-snippets",
+    "description": "NgRx Angular snippets for vscode",
+    "version": "0.0.2",
+    "publisher": "ahsanayaz",
+    "icon": "images/ngrx-store-logo.png",
+    "engines": {
+        "vscode": "^1.15.0"
+    },
+    "keywords": [
+        "Angular",
+        "Angular2",
+        "Angular4",
+        "TypeScript",
+        "NgRx"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/AhsanAyaz/vscode-ngrx-snippets.git"
+    },
+    "author": "Ahsan Ayaz",
+    "license": "SEE LICENSE IN LICENSE.MD",
+    "bugs": {
+      "url": "https://github.com/AhsanAyaz/vscode-ngrx-snippets/issues"
+    },
+    "homepage": "https://github.com/AhsanAyaz/vscode-ngrx-snippets#readme",
+    "devDependencies": {
+        "vscode": "^1.1.5"
+    },
+    "categories": [
+        "Snippets",
+        "Other"
+    ],
+    
+    "contributes": {
+        "snippets": [
+            {
+                "language": "typescript",
+                "path": "./snippets/typescript.json"
+            }
+        ]
+    }
+}
