@@ -13,8 +13,9 @@ pressing `Tab` and to previous using `Shift + Tab`.
 
 | Snippet                      | Purpose                    |
 |------------------------------|----------------------------|
-| `ngrx-action`                | a single store action with usual imports and exports |
-| `ngrx-actions-multiple`      | multiple actions snippet. Similar to `ngrx-action` |
+| `ngrx-action-single`         | a single store action with the action class |
+| `ngrx-actions`               | Actions setup with necessary imports. Multiple actions snippet included. And relevant exports |
+| `ngrx-actions-api-action`    | Api Action snippet that includes an api action along with success and failure snippets |
 | `ngrx-reducer`               | snippet for ngrx reducer. contains model/feature state interface, initial state var, reducer and selectors |
 | `ngrx-effects`               | effects snippet with a simple http example |
 

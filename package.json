@@ -2,7 +2,7 @@
     "name": "vscode-ngrx-snippets",
     "displayName": "vscode-ngrx-snippets",
     "description": "NgRx Angular snippets for vscode",
-    "version": "0.0.2",
+    "version": "0.0.4",
     "publisher": "ahsanayaz",
     "icon": "images/ngrx-store-logo.png",
     "engines": {

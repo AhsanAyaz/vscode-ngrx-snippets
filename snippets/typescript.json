@@ -1,42 +1,60 @@
 {
   "NgRx Action Snippet": {
-    "prefix": "ngrx-action",
+    "prefix": "ngrx-action-single",
     "body": [
-      "import { Action } from '@ngrx/store';",
-      "",
       "export const ${1:ACTION_NAME} =           '[${2:MODEL_NAME}] ${3:Action}';",
-      "",
-      "export class ${3:Action}Action implements Action {",
+      "export class ${3:ActionName} implements Action {",
       "  readonly type = ${1:ACTION_NAME};",
+      "",
+      "  constructor(public payload: ${4:PAYLOAD_TYPE}) { }",
+      "}"
+    ],
+    "description": "Angular snippet for single NgRx Action"
+  },
+  "NgRx API Action Snippet": {
+    "prefix": "ngrx-action-api-action",
+    "body": [
+      "export const ${1:API_ACTION_NAME} =                '[${2:MODEL_NAME}] ${3:ApiAction}';",
+      "export const ${1:API_ACTION_NAME}_SUCCESS =        '[${2:MODEL_NAME}] ${3:ApiAction}Success';",
+      "export const ${1:API_ACTION_NAME}_FAILURE =        '[${2:MODEL_NAME}] ${3:ApiAction}Failure';",
+      "",
+      "",
+      "export class ${3:ApiAction} implements Action {",
+      "  readonly type = ${1:API_ACTION_NAME};",
       "",
       "  constructor(public payload: ${4:PAYLOAD_TYPE}) { }",
       "}",
       "",
-      "/**",
-      " * Export a type alias of all actions in this action group",
-      " * so that reducers can easily compose action types",
-      " */",
-      "export type Actions",
-      "  = ${3:Action}Action;"
+      "export class ${3:ApiAction}Success implements Action {",
+      "    readonly type = ${1:API_ACTION_NAME}_SUCCESS;",
+      "",
+      "    constructor(public payload: ${5:PAYLOAD_TYPE}) { }",
+      "}",
+      "",
+      "export class ${3:ApiAction}Failure implements Action {",
+      "    readonly type = ${1:API_ACTION_NAME}_FAILURE;",
+      "",
+      "    constructor(public payload: ${6:PAYLOAD_TYPE}) { }",
+      "}"
     ],
-    "description": "Angular snippet for NgRx Action"
+    "description": "API action with success and failure actions for NgRx"
   },
   "NgRx Actions Multiple Snippet": {
-    "prefix": "ngrx-actions-multiple",
+    "prefix": "ngrx-actions",
     "body": [
       "import { Action } from '@ngrx/store';",
       "",
-      "export const ${1:FIRST_ACTION_NAME} =           '[${2:MODEL_NAME}] ${3:FirstAction}';",
-      "export const ${4:SECOND_ACTION_NAME} =           '[${2:MODEL_NAME}] ${5:SecondAction}';",
+      "export const ${1:ACTION_NAME} =           '[${2:MODEL_NAME}] ${3:ActionName}';",
+      "export const ${4:ACTION_NAME} =           '[${2:MODEL_NAME}] ${5:ActionName}';",
       "",
-      "export class ${3:First}Action implements Action {",
-      "  readonly type = ${1:FIRST_ACTION_NAME};",
+      "export class ${3:ActionName} implements Action {",
+      "  readonly type = ${1:ACTION_NAME};",
       "",
       "  constructor(public payload: ${6:PAYLOAD_TYPE}) { }",
       "}",
       "",
-      "export class ${5:Second}Action implements Action {",
-      "    readonly type = ${4:SECOND_ACTION_NAME};",
+      "export class ${5:ActionName} implements Action {",
+      "    readonly type = ${4:ACTION_NAME};",
       "  ",
       "    constructor(public payload: ${7:PAYLOAD_TYPE}) { }",
       "  }",
@@ -46,10 +64,10 @@
       " * so that reducers can easily compose action types",
       " */",
       "export type Actions",
-      "= ${3:First}Action",
-      "| ${5:Second}Action;"
+      "= ${3:ActionName}",
+      "| ${5:ActionName};"
     ],
-    "description": "Multiple actions snippet for NgRx"
+    "description": "Actions setup with multiple actions. Includes required imports and exports"
   },
   "NgRx Reducer Snippet": {
     "prefix": "ngrx-reducer",
