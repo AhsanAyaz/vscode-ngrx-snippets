@@ -1,5 +1,9 @@
 # NgRx - Angular + TypeScript Snippets for VS Code
 
+## Download Link
+
+Download from [vscode-ngrx-snippets](https://marketplace.visualstudio.com/items?itemName=ahsanayaz.vscode-ngrx-snippets) on VS Market Place
+
 The extension contains snippets for NgRx used with Angular(v4) & Typescript.
 
 ![Snippets Usage](https://github.com/AhsanAyaz/vscode-ngrx-snippets/raw/master/images/usage_min.gif)
